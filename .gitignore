@@ -1,0 +1,96 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# IDE and editors
+.idea/
+.vscode/
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Build output
+.next/
+out/
+build/
+dist/
+.open-next/
+next-env.d.ts
+*.tsbuildinfo
+
+# Testing & coverage
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dump.rdb
+
+# OS / system
+.DS_Store
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+.ruff_cache/
+
+# Deployment
+.vercel
+.wrangler/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Environment / secrets
+.env
+.env.*
+*.env
+credentials.json
+*token.json*
+.credentials
+# But DO ship example templates
+!.env.example
+!.env.local.example
+
+# Local file storage (uploaded user documents)
+data/
+
+# Internal / dev artifacts (not shipped to OSS)
+.emergent/
+memory/
+plan.md
+test_result.md
+test_reports/
+tests/
+backend_comprehensive_test.py
+frontend/node_modules/@next/swc-linux-arm64-musl/next-swc.linux-arm64-musl.node
+frontend/node_modules/@next/swc-linux-arm64-gnu/next-swc.linux-arm64-gnu.node
+frontend/node_modules/@cloudflare/workerd-linux-arm64/bin/workerd
+open-specter-main/frontend/node_modules/@next/swc-linux-arm64-musl/next-swc.linux-arm64-musl.node
+open-specter-main/frontend/node_modules/@next/swc-linux-arm64-gnu/next-swc.linux-arm64-gnu.node
+open-specter-main/frontend/node_modules/@cloudflare/workerd-linux-arm64/bin/workerd
+-e 
+# Environment and credential files
+.env
+.env.*
+*.env
+credentials.json
+*.pem
+*.key
+.credentials
