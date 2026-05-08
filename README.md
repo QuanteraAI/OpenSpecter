@@ -2,6 +2,9 @@
 
 Open Specter is an enterprise-grade AI workspace for legal teams. It helps professionals organize matters, upload and review documents, run assistant conversations, create tabular reviews, and reuse structured workflows — all with a restrained, grayscale interface designed for white-collar professional use.
 
+<img width="1071" height="600" alt="Frame 4" src="https://github.com/user-attachments/assets/a3e9d6ec-e43d-4473-8f6d-243c22a1fce0" />
+
+
 Maintained by **Quantera.ai**.
 
 ---
