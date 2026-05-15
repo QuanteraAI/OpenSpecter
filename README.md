@@ -32,7 +32,7 @@ Maintained by **Quantera.ai**.
 | Database/Auth | Supabase Auth + Postgres |
 | Storage | Cloudflare R2 / S3-compatible storage, with local fallback for development |
 | AI Providers | Gemini, Anthropic, OpenRouter-compatible models |
-| Legal research | [LegalDataHunter](https://legaldatahunter.com) — case law & legislation across 178 jurisdictions |
+| Legal research | [LegalDataHunter](https://legaldatahunter.com) (case law & legislation across 178 jurisdictions) and/or [Vaquill](https://www.vaquill.ai/legal-api) (AI Q&A across US primary law and Indian case law) |
 | Document tooling | LibreOffice for DOC/DOCX conversion |
 
 ---
@@ -105,13 +105,23 @@ ANTHROPIC_API_KEY=your-anthropic-key
 OPENROUTER_API_KEY=your-openrouter-key
 RESEND_API_KEY=your-resend-key
 
-# LegalDataHunter — required for the "Sources" panel and inline legal-research
-# citations in the assistant chat. This is a paid third-party API. You MUST use
-# YOUR OWN key — usage is billed against the key holder's account, and Open
-# Specter ships no fallback. Sign up at https://legaldatahunter.com to get one.
-# If this variable is unset, the Sources feature is silently disabled and the
-# rest of the app keeps working.
+# Legal-research providers. Set whichever one(s) you want to enable; both can
+# be enabled simultaneously. The frontend chooses which to call. If neither is
+# set, the Sources feature and inline legal-research citations are silently
+# disabled and the rest of the app keeps working.
+#
+# Each is a paid third-party API. You MUST use YOUR OWN key. Usage is billed
+# against the key holder's account; Open Specter ships no fallback.
+
+# LegalDataHunter: case law and legislation across 178 jurisdictions.
+# Sign up at https://legaldatahunter.com.
 LEGAL_DATA_HUNTER_API_KEY=your-legaldatahunter-key
+
+# Vaquill: AI-grounded Q&A across US primary law (Constitution, USC, CFR,
+# Federal Rules, 50-state codes, Executive Orders since 2015) plus Indian
+# case law (31M+ judgments) and citation-graph traversal. Sign up at
+# https://www.vaquill.ai/legal-api. Key format: vq_key_...
+VAQUILL_API_KEY=vq_key_your_vaquill_key
 ```
 
 ### Frontend
@@ -333,7 +343,7 @@ deployments.
 ## Third-party API keys are your responsibility
 
 Open Specter integrates with paid third-party services (Supabase, Cloudflare
-R2, Gemini, Anthropic, OpenRouter, Resend, LegalDataHunter). Open Specter
+R2, Gemini, Anthropic, OpenRouter, Resend, LegalDataHunter, Vaquill). Open Specter
 ships **no shared/upstream fallback** for any of them — every self-host must
 provide its own credentials in `backend/.env`. Usage of each integration is
 billed against the key holder's account; the project maintainers cannot be

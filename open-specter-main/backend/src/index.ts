@@ -11,6 +11,7 @@ import { userRouter } from "./routes/user";
 import { downloadsRouter } from "./routes/downloads";
 import { activityRouter } from "./routes/activity";
 import { legalDataRouter } from "./routes/legalData";
+import { vaquillRouter } from "./routes/vaquill";
 
 const app = express();
 const PORT = process.env.PORT ?? 3001;
@@ -35,6 +36,7 @@ app.use("/users", userRouter);
 app.use("/download", downloadsRouter);
 app.use("/activity", activityRouter);
 app.use("/legal-data", legalDataRouter);
+app.use("/vaquill", vaquillRouter);
 
 app.get("/health", (_req, res) => res.json({ ok: true }));
 
@@ -61,6 +63,7 @@ function logIntegrationStatus(): void {
   console.log(`  Resend (email)     : ${status(has(process.env.RESEND_API_KEY))}`);
   console.log(`  Cloudflare R2      : ${status(has(process.env.R2_ENDPOINT_URL) && has(process.env.R2_ACCESS_KEY_ID))}`);
   console.log(`  LegalDataHunter    : ${status(has(process.env.LEGAL_DATA_HUNTER_API_KEY))}`);
+  console.log(`  Vaquill            : ${status(has(process.env.VAQUILL_API_KEY))}`);
   if (!has(process.env.LEGAL_DATA_HUNTER_API_KEY)) {
     console.warn(
       "  ⚠  LEGAL_DATA_HUNTER_API_KEY is not set. The 'Sources' panel and inline\n" +
