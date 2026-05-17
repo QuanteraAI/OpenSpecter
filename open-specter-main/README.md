@@ -302,4 +302,8 @@ Check your R2/S3 env vars:
 
 ## License
 
-Proprietary. Copyright (c) 2026 Quantera.ai. All rights reserved. See `LICENSE`.
+AGPL-3.0 License — see [`LICENSE`](./LICENSE).
+
+Copyright (c) 2026 Quantera.ai. Open Specter is provided under AGPL-3.0 with
+the explicit requirement that if you distribute or host this software, you must retain
+the copyright notice and document your changes per the license terms.

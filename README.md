@@ -316,7 +316,7 @@ Check your R2/S3 env vars:
 
 Apache License 2.0 — see [`LICENSE`](./LICENSE).
 
-Copyright (c) 2026 Quantera.ai. Open Specter is provided under Apache-2.0 with
+Copyright (c) 2026 Quantera.ai. Open Specter is provided under AGPL-3.0 with
 patent grant. Self-host it freely, fork it, ship modified versions — just keep
 the copyright notice and document your changes per the license terms.
 
