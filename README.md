@@ -312,13 +312,19 @@ Check your R2/S3 env vars:
 
 ---
 
+3 quick fixes — exact actions
+Fix 1 — Replace your local README.md and push
+On your laptop, replace ~/open-specter/README.md with the version from this pod. I'll paste it inline below — copy the entire block.
+
+Open ~/open-specter/README.md in any editor, find the ## License section near the bottom, and replace EVERYTHING from ## License to end-of-file with this:
 ## License
 
-Apache License 2.0 — see [`LICENSE`](./LICENSE).
+GNU Affero General Public License v3.0 or later — see [`LICENSE`](./LICENSE).
 
-Copyright (c) 2026 Quantera.ai. Open Specter is provided under AGPL-3.0 with
-patent grant. Self-host it freely, fork it, ship modified versions — just keep
-the copyright notice and document your changes per the license terms.
+Copyright (c) 2026 Quantera.ai. Open Specter is provided under **AGPL-3.0** with
+strong copyleft. You may self-host, fork, and modify freely — but if you run a
+modified version as a network service, you must offer your source code to
+your users under the same license. See [`LICENSE`](./LICENSE) for full terms.
 
 ---
 
@@ -340,3 +346,27 @@ billed against the key holder's account; the project maintainers cannot be
 held responsible for spend on third-party APIs. The backend logs an
 integration-status summary at boot so you can see at a glance which providers
 are enabled for the current deployment.
+
+---
+
+## Credits & inspiration
+
+Open Specter is a fork of and is deeply inspired by **[Mike](https://mikeoss.com/)**
+([willchen96/mike](https://github.com/willchen96/mike)) — the original
+open-source AI legal platform created by Will Chen and contributors as an
+open alternative to Harvey and Legora.
+
+Massive thanks to the Mike OSS team for laying the foundation, releasing it
+under AGPL-3.0, and proving that enterprise-grade legal AI can be self-hosted
+by any firm without lock-in. Open Specter extends Mike with:
+
+- A neutral grayscale enterprise-grade UI overhaul (Framer Motion, Apple-inspired)
+- Supabase anonymous sign-ins / Guest Mode + 7-day cleanup of orphaned accounts
+- 10+ additional legal workflow templates
+- **LegalDataHunter** integration for jurisdiction-scoped case-law and
+  legislation retrieval with inline citations across 178 jurisdictions
+
+If you use Open Specter, please **also star the upstream Mike repo** —
+[github.com/willchen96/mike](https://github.com/willchen96/mike) — it's the
+project that made all of this possible.
+
