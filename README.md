@@ -312,11 +312,6 @@ Check your R2/S3 env vars:
 
 ---
 
-3 quick fixes — exact actions
-Fix 1 — Replace your local README.md and push
-On your laptop, replace ~/open-specter/README.md with the version from this pod. I'll paste it inline below — copy the entire block.
-
-Open ~/open-specter/README.md in any editor, find the ## License section near the bottom, and replace EVERYTHING from ## License to end-of-file with this:
 ## License
 
 GNU Affero General Public License v3.0 or later — see [`LICENSE`](./LICENSE).
